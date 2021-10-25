@@ -1,0 +1,25 @@
+<div class="logout">
+    <a  (click)="logout()"><button>Logout</button></a>
+  </div>
+  <form class="container form" autocomplete="off" [formGroup]="form">
+      <div class="item label">
+          Name:
+        </div>
+        <div class="item input">
+          <input type="text"  formControlName="employee_name"/>
+        </div>
+        <div class="item label">
+          Salary:
+        </div>
+        <div class="item input">
+          <input type="number"  formControlName="employee_salary"/>
+        </div>
+        <div class="item label">
+          Age:
+        </div>
+        <div class="item input">
+          <input type="number"  formControlName="employee_age"/>
+        </div>
+      <h3 class="item input"></h3>
+      <button (click)="bt()">Add Employee</button>
+  </form>
