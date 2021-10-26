@@ -7,8 +7,10 @@
 <li><a href="">Page</a></li>
 <li><a href="">Portfolio</a></li>
 <li><a href="">Blog</a></li>
-<li><a class="btn1"><button>Register</button></a></li>
-<li><a class="btn2"><button>Login</button></a></li>
+<li><a class="btn1" [routerLink]="['/reg']"><button>Register</button></a></li>
+<li><a class="btn2" [routerLink]="['/login']"><button>Login</button></a></li>
+
+    <li class="logout"><a  (click)="logout()"><button>Logout</button></a></li>
 
 
 </ul>

@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 export class RegService {
   constructor(private http:HttpClient) { }
   getAll():Observable<any[]>{
-    console.log(`${environment.api}/employees`)
-    return this.http.get<any[]>(`${environment.api}/employees`)
+    console.log(`${environment.api}/users`)
+    return this.http.get<any[]>(`${environment.api}/users`)
   }
   getAll2():Observable<any[]>{
     console.log(`${environment.api}/users`)

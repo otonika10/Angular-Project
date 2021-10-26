@@ -11,32 +11,38 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  employees$:any = this.reg.getAll()
+  users$:any = this.reg.getAll()
   
   productId:number=4;
   
   form = new FormGroup(
     {
-      employee_name: new FormControl('',Validators.required),
-      employee_salary: new FormControl('',Validators.required),
-      employee_age: new FormControl('',Validators.required),
+      email: new FormControl('',[Validators.required]),
+      username: new FormControl('',[Validators.required]),
+      password: new FormControl('',Validators.required),
+      confirm_password: new FormControl('',Validators.required),
     }
   )
+  counter:number=0
+  token:any=''
   bt(){
-        if(this.form.valid){ 
-        let data:any[]=this.form.value
-        this.http.post(`${environment.api}/employees`,data).subscribe()
-        this.form.reset()
-      }
+        if(this.form.valid){
+          if(this.form.get('password')?.value==(this.form.get('confirm_password')?.value)){
+            this.counter++
+            this.token=`fa1hfiawfaf${(Math.random() * (1000 - 1) + 1)}`
+            console.log(this.token)
+            let data:any={reg_info:this.form.value,token:this.token}
+            this.http.post(`${environment.api}/users`,data).subscribe()
+            this.form.reset()
+        
+          }
+        }
   }
 
 
 
   constructor(private reg:RegService,private http:HttpClient, private router:Router) {}
-  logout(){
-    localStorage.removeItem('token')
-    this.router.navigateByUrl('/').then()
-  }
+
   ngOnInit(): void {
   }
 

@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+*{
+  font-family: 'Roboto', sans-serif;
+}
 .container {
     margin-top: 20px;
-    width: 310px;
+
+
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
+    background-color: white;
     font-size: 20px;
-  
+    padding: 2%;
+    box-shadow: 5px 5px 5px 5px #888888;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     .item {
-      flex-basis: 20%;
-      
+      flex-basis: 30%;
+      background-color: white;
     }
     .it,.it1 {
         
@@ -20,21 +30,47 @@
         margin-top:-8%;
         margin-left: 53%;
     }
-    input {
+    input {    background-color: white;
       min-width: 200px;
-      min-height: 25px;
+      min-height: 30px;
       border-radius: 5px;
+      font-size: 18px;
     }
 
   }
   button {
     background-color: white;
     border-radius: 5px;
-    
+    min-width: 215px;
+    min-height: 30px;
+    font-size: 18px;
 }
-  .logout{
-    float: right;
-    button {
-      color: red;
-    }
-  }
+button:hover{
+  
+    color: rgb(182, 76, 37);
+  
+}
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.cont{
+ 
+  padding: 1%;
+  margin-top: 10%;
+  background-color: white;
+}
+.pic{
+ 
+  width: 300px;
+  padding: 1%;
+  background-color: white;
+
+}
+span{
+  position: relative;
+  top: -15%;
+  left: 25%;
+  font-size: 25px;
+  background-color: white;
+}

@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RegService } from '../reg.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,8 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private reg:RegService,private http:HttpClient, private router:Router) {}
+  logout(){
+    localStorage.removeItem('token')
+    this.router.navigateByUrl('/').then()
+  }
   ngOnInit(): void {
   }
 

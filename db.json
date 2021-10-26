@@ -1,37 +1,23 @@
 {
-  "employees": [
-    {
-      "id": 1,
-      "employee_name": "David Laid",
-      "employee_salary": 170750,
-      "employee_age": 23,
-      "profile_image": ""
-    },
-    {
-      "employee_name": "oto",
-      "employee_salary": 1200,
-      "employee_age": 20,
-      "id": 2
-    }
-  ],
   "users": [
     {
-      "id": 1,
-      "email": "user@gmail.com",
-      "password": "user",
-      "token": "fa1hfiawfaf"
+      "reg_info": {
+        "email": "user@gmail.com",
+        "password": "user",
+        "confirm_password": "user"
+      },
+      "token": "fa1hfiawfaf1",
+      "id": 1
     },
     {
-      "id": 2,
-      "email": "user1@gmail.com",
-      "password": "user1",
-      "token": "fa1hfiawfaf1"
-    },
-    {
-      "id": 3,
-      "email": "user2@gmail.com",
-      "password": "user2",
-      "token": "fa1hfiawfaf2"
+      "reg_info": {
+        "email": "oto@gmail.com",
+        "username": "otonika1",
+        "password": "123",
+        "confirm_password": "123"
+      },
+      "token": "fa1hfiawfaf157.13141583068517",
+      "id": 2
     }
   ]
 }

@@ -12,7 +12,9 @@ import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-//import { LoginGuard } from './login.guard';
+import { LoginComponent } from './auth/login/login.component';
+import { LoginGuard } from './auth/guard/login.guard';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -27,22 +29,27 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
+    AuthModule,
 
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'reg',
         pathMatch: 'full'
       },
       {
         path: 'home',
-        component: HomeComponent
+        component: HomeComponent,
+        canActivate:[LoginGuard]
       },
       {
         path: 'reg',
         component: RegisterComponent
       },
-
+      {
+        path: 'login',
+        component: LoginComponent
+      },
 
     ])
   ],
