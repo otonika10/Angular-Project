@@ -1,0 +1,42 @@
+<div class="cont">
+    <app-nav-bar></app-nav-bar>
+    <div class="items">
+        <h1 align="center">Teams</h1>
+
+        <ul>
+            <table class="table">
+                <thead>
+                    <tr>
+                     <th>Abbreviation</th>
+                     <th>FullName</th>
+                     <th>Name</th>
+                     <th>Division</th>
+                     <th>City</th>
+                    </tr>
+                </thead>
+            </table>
+            <li *ngFor="let i of players">
+               <!--  <div class="container">
+                    <div class="item1">{{i.abbreviation}}</div>
+                    <div class="item2">{{i.full_name}}</div>
+                    <div class="item3">{{i.name}}</div>
+                    <div class="item4">{{i.division}}</div>
+                </div> -->
+                <table class="table">
+                    <tbody>
+                          <tr>
+                                <td data-label="Abbreviation">{{i.abbreviation}}</td>
+                                <td data-label="FullName">{{i.full_name}}</td>
+                                <td data-label="Name">{{i.name}}</td>
+                                <td data-label="Division">{{i.division}}</td>
+                                <td data-label="City">{{i.city}}</td>
+                          </tr>
+               
+                        
+                    </tbody>
+                  </table>
+
+            </li>
+        </ul>
+    </div>
+</div>

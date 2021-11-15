@@ -8,13 +8,16 @@ import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from '@angular/common/http';
 
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LoginComponent } from './auth/login/login.component';
 import { LoginGuard } from './auth/guard/login.guard';
 import { AuthModule } from './auth/auth.module';
+import { TeamsComponent } from './teams/teams.component';
+import { PlayersComponent } from './players/players.component';
+import { GamesComponent } from './games/games.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { AuthModule } from './auth/auth.module';
     AppComponent,
     RegisterComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    TeamsComponent,
+    PlayersComponent,
+    GamesComponent
   ],
   imports: [
     HttpClientModule,
@@ -40,6 +46,21 @@ import { AuthModule } from './auth/auth.module';
       {
         path: 'home',
         component: HomeComponent,
+        canActivate:[LoginGuard]
+      },
+      {
+        path: 'teams',
+        component: TeamsComponent,
+        canActivate:[LoginGuard]
+      },
+      {
+        path: 'games',
+        component: GamesComponent,
+        canActivate:[LoginGuard]
+      },
+      {
+        path: 'players',
+        component: PlayersComponent,
         canActivate:[LoginGuard]
       },
       {

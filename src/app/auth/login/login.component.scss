@@ -1,22 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+*{
+  font-family: 'Roboto', sans-serif;
+}
+::-webkit-input-placeholder {
+  text-align: center;
+}
 .container {
     display: flex;
-    
+    box-shadow: 5px 5px 5px 5px #888888;
+    padding: 2%;
     flex-direction: column;
-    margin-top: 20%;
-    height: 100%;
-    width: 100%;
+    background-color: white;
     justify-content: center;
     align-items: center;
     gap: 5px;
-  
-  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     .item {
       height: 30px;
       
     }
   
     input {
-       
+       background-color: white;
         outline: none;
       width: 300px;
       font-size: 20px;
@@ -29,6 +37,9 @@
       border-radius: 10px;
       background-color: white;
       outline: none;
+    }
+    button:hover{
+      color: rgb(182, 76, 37);
     }
   }
   

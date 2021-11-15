@@ -1,6 +1,7 @@
 <div class="container">
     <input class="item" placeholder="Email" [formControl]="email" type="text">
     <input class="item" placeholder="Password" [formControl]="password" type="password">
-    <button (click)="login()">login</button>
+    <button (click)="login()">Login</button>
+    <a [routerLink]="['/reg']"><button >Register</button></a>
   </div>
   

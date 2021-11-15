@@ -1,0 +1,49 @@
+<div class="cont">
+    <app-nav-bar></app-nav-bar>
+    <div class="items">
+        <h1 align="center">Games</h1>
+
+        <ul>
+
+            <li *ngFor="let i of players">
+               <!--  <div class="container">
+                    <div class="item1">{{i.abbreviation}}</div>
+                    <div class="item2">{{i.full_name}}</div>
+                    <div class="item3">{{i.name}}</div>
+                    <div class="item4">{{i.division}}</div>
+                </div> -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th>Date</th>
+                        <th>Period</th>
+                         <th>Season</th>
+                         <th>Status</th>
+                         <th>Abbreviation</th>
+                         <th>Score</th>
+                         <th></th>
+                         <th>Score</th>
+                         <th>Abbreviation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          <tr>
+                                <td data-label="Date">{{i.date}}</td>
+                                <td data-label="Period">{{i.period}}</td>
+                                <td data-label="Season">{{i.season}}</td>
+                                <td data-label="Status">{{i.status}}</td>
+                                <td data-label="Abbreviation">{{i.home_team.abbreviation}}</td>
+                                <td data-label="Score">{{i.home_team_score}}</td>
+                                <td data-label="VS">VS</td>
+                                <td data-label="Score">{{i.visitor_team_score}}</td>
+                                <td data-label="Abbreviation">{{i.visitor_team.abbreviation}}</td>
+                          </tr>
+               
+                        
+                    </tbody>
+                  </table>
+
+            </li>
+        </ul>
+    </div>
+</div>
