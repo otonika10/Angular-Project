@@ -26,19 +26,19 @@
                     </thead>
                     <tbody>
                           <tr>
-                                <td data-label="FirstName">{{i.game.date}}</td>
-                                <td data-label="LastName">{{i.ast}}</td>
-                                <td data-label="Team">{{i.blk}}</td>
-                                <td data-label="Height">{{i.dreb}}</td>
-                                <td data-label="Weight">{{i.fg3_pct}}</td>
-                                <td data-label="Position">{{i.fg3a}}</td>
-                                <td data-label="Position">{{i.fg3m}}</td>
-                                <td data-label="Position">{{i.fg_pct}}</td>
-                                <td data-label="Position">{{i.fg_pct}}</td>
-                                <td data-label="Position">{{i.fgm}}</td>
-                                <td data-label="Position">{{i.ft_pct}}</td>
-                                <td data-label="Position">{{i.fta}}</td>
-                                <td data-label="Position">{{i.ftm}}</td>
+                                <td data-label="Game">{{i.game.date}}</td>
+                                <td data-label="ast">{{i.ast}}</td>
+                                <td data-label="blk">{{i.blk}}</td>
+                                <td data-label="dreb">{{i.dreb}}</td>
+                                <td data-label="fg3-pct">{{i.fg3_pct}}</td>
+                                <td data-label="fg3a">{{i.fg3a}}</td>
+                                <td data-label="fg3m">{{i.fg3m}}</td>
+                                <td data-label="fg_pct">{{i.fg_pct}}</td>
+                                <td data-label="fga">{{i.fg_pct}}</td>
+                                <td data-label="fgm">{{i.fgm}}</td>
+                                <td data-label="ft_pct">{{i.ft_pct}}</td>
+                                <td data-label="fta">{{i.fta}}</td>
+                                <td data-label="ftm">{{i.ftm}}</td>
                           </tr>
                           <tr>
                             <th>Team ID and Score</th>
@@ -47,27 +47,28 @@
                             <th>Player</th>
                             <th>Team ID</th>
                             <th>min</th>
+                            <th>oreb</th>
                             <th>pf</th>
                             <th>pts</th>
                             <th>reb</th>
                             <th>stl</th>
-                            <th></th>
+                           
                             <th></th>
                             <th></th>
                             
                            </tr>
                            <tr>
-                            <td data-label="FirstName">{{"ID: "+i.game.visitor_team_id+" Score: "+i.game.visitor_team_score+"PTS" }}</td>
-                            <td data-label="LastName">VS</td>
-                            <td data-label="Team">{{"ID: "+i.game.home_team_id+" Score: "+i.game.home_team_score+"PTS" }}</td>
-                            <td data-label="Height">{{i.player.first_name+" "+i.player.last_name}}</td>
-                            <td data-label="Weight">{{i.team.id}}</td>
-                            <td data-label="Weight">{{i.min}}</td>
-                            <td data-label="Position">{{i.oreb}}</td>
-                            <td data-label="Position">{{i.pf}}</td>
-                            <td data-label="Position">{{i.pts}}</td>
-                            <td data-label="Position">{{i.reb}}</td>
-
+                            <td data-label="Team ID and Score">{{"ID: "+i.game.visitor_team_id+" Score: "+i.game.visitor_team_score+"PTS" }}</td>
+                            <td data-label="">VS</td>
+                            <td data-label="Team ID and Score">{{"ID: "+i.game.home_team_id+" Score: "+i.game.home_team_score+"PTS" }}</td>
+                            <td data-label="Player">{{i.player.first_name+" "+i.player.last_name}}</td>
+                            <td data-label="Team ID">{{i.team.id}}</td>
+                            <td data-label="min">{{i.min}}</td>
+                            <td data-label="pf">{{i.oreb}}</td>
+                            <td data-label="pf">{{i.pf}}</td>
+                            <td data-label="pts">{{i.pts}}</td>
+                            <td data-label="reb">{{i.reb}}</td>
+                            <td data-label="stl">{{i.stl}}</td>
                       </tr>
                     </tbody>
                   </table>

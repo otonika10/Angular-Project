@@ -89,3 +89,169 @@ th, td {
         list-style-type: none;
       }
 }
+
+
+
+
+
+.cont2 {
+    min-height: 360px;
+    max-height: 1000px;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    flex-wrap: wrap;
+  }
+  .cont2 .item3 {
+    flex-basis: 50%;
+    min-height: 360px;
+    max-height: 1000px;
+  }
+  .cont2 .item3 .bigtxt {
+    margin-top: 12%;
+    position: relative;
+    left: 12%;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    color: white;
+    width: 70%;
+    line-height: 18px;
+  }
+  .cont2 .item3 .txtsml {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .cont2 .item3 .button2 {
+    position: relative;
+    margin-top: 5%;
+    left: 13%;
+    width: 150px;
+    height: 50px;
+    border-color: white;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+  }
+  .cont2 .item4 {
+    flex-basis: 50%;
+    min-height: 360px;
+    max-height: 1000px;
+  }
+  .cont2 .item4 .bigtxt {
+    margin-top: 12%;
+    position: relative;
+    left: 12%;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    color: white;
+    width: 70%;
+    line-height: 18px;
+  }
+  .cont2 .item4 .txtsml {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .cont2 .item4 .button2 {
+    position: relative;
+    margin-top: 5%;
+    left: 13%;
+    width: 150px;
+    height: 50px;
+    border-color: white;
+    border-radius: 5px;
+    color: white;
+  }
+  .cont2 .item5 {
+    flex-basis: 33.3%;
+    min-height: 360px;
+    max-height: 1000px;
+  }
+  .cont2 .item5 .bigtxt {
+    margin-top: 12%;
+    position: relative;
+    left: 12%;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    color: white;
+    width: 70%;
+    line-height: 18px;
+  }
+  .cont2 .item5 .txtsml {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .cont2 .item5 .button3 {
+    position: relative;
+    margin-top: 5%;
+    left: 13%;
+    width: 150px;
+    height: 50px;
+    border-color: white;
+    border-radius: 5px;
+    color: white;
+  }
+  .cont2 .item3 {
+    background-color: rgb(35, 35, 233);
+  }
+  .cont2 .item4 {
+    background-color: rgb(241, 27, 27);
+  }
+
+  
+  @media screen and (max-width: 800px) {
+    .cont2 .item3, .cont2 .item4, .cont2 .item5 {
+      flex-basis: 100%;
+    }
+  }
+
+
+  
+
+  .cont5 span {
+    font-size: 18px;
+    font-weight: 900;
+    position: relative;
+    top: 2.5%;
+    left: 5%;
+    letter-spacing: 2px;
+  }
+  .cont5 .span2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: silver;
+  }
+  .cont5 .span2 span {
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    height: 200px;
+    position: relative;
+    top: 3%;
+    left: -2%;
+    word-spacing: 10px;
+  }
+  .cont5 .button5 {
+    position: relative;
+    top: 10%;
+    left: 7%;
+    width: 230px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    border-color: black;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  .cont5 .button5:hover {
+    background-color: #08f7cf;
+    color: white;
+    border-color: #08f7cf;
+  }
+  
