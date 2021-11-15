@@ -18,6 +18,16 @@
       },
       "token": "fa1hfiawfaf157.13141583068517",
       "id": 2
+    },
+    {
+      "reg_info": {
+        "email": "oto1@gmail.com",
+        "username": "otonika1",
+        "password": "oto",
+        "confirm_password": "oto"
+      },
+      "token": "fa1hfiawfaf349.17183461595033",
+      "id": 3
     }
   ]
 }

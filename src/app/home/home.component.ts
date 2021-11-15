@@ -14,10 +14,14 @@ import { pipe } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  players$:Observable<any> | undefined 
-  constructor(private reg:RegService,private http:HttpClient, private router:Router) {
+
+  constructor(private reg:RegService) { }
+  players:any[]=[]
+  ngOnInit(): void {
+    this.reg.getdataplayers().subscribe((res:any)=>{console.log(res);
+      this.players = res.data;
+      });
   }
-
-  ngOnInit(): void {}
-
+  show(){
+  }
 }

@@ -1,0 +1,78 @@
+<div class="cont">
+    <app-nav-bar></app-nav-bar>
+    <div class="items">
+        <h1 align="center">Stats</h1>
+
+        <ul>
+
+            <li *ngFor="let i of arr">
+                <table class="table">
+                    <thead>
+                        <tr>
+                         <th>Game</th>
+                         <th>ast</th>
+                         <th>blk</th>
+                         <th>dreb</th>
+                         <th>fg3-pct</th>
+                         <th>fg3a</th>
+                         <th>fg3m</th>
+                         <th>fg_pct</th>
+                         <th>fga</th>
+                         <th>fgm</th>
+                         <th>ft_pct</th>
+                         <th>fta</th>
+                         <th>ftm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          <tr>
+                                <td data-label="FirstName">{{i.game.date}}</td>
+                                <td data-label="LastName">{{i.ast}}</td>
+                                <td data-label="Team">{{i.blk}}</td>
+                                <td data-label="Height">{{i.dreb}}</td>
+                                <td data-label="Weight">{{i.fg3_pct}}</td>
+                                <td data-label="Position">{{i.fg3a}}</td>
+                                <td data-label="Position">{{i.fg3m}}</td>
+                                <td data-label="Position">{{i.fg_pct}}</td>
+                                <td data-label="Position">{{i.fg_pct}}</td>
+                                <td data-label="Position">{{i.fgm}}</td>
+                                <td data-label="Position">{{i.ft_pct}}</td>
+                                <td data-label="Position">{{i.fta}}</td>
+                                <td data-label="Position">{{i.ftm}}</td>
+                          </tr>
+                          <tr>
+                            <th>Team ID and Score</th>
+                            <th></th>
+                            <th>Team ID and Score</th>
+                            <th>Player</th>
+                            <th>Team ID</th>
+                            <th>min</th>
+                            <th>pf</th>
+                            <th>pts</th>
+                            <th>reb</th>
+                            <th>stl</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            
+                           </tr>
+                           <tr>
+                            <td data-label="FirstName">{{"ID: "+i.game.visitor_team_id+" Score: "+i.game.visitor_team_score+"PTS" }}</td>
+                            <td data-label="LastName">VS</td>
+                            <td data-label="Team">{{"ID: "+i.game.home_team_id+" Score: "+i.game.home_team_score+"PTS" }}</td>
+                            <td data-label="Height">{{i.player.first_name+" "+i.player.last_name}}</td>
+                            <td data-label="Weight">{{i.team.id}}</td>
+                            <td data-label="Weight">{{i.min}}</td>
+                            <td data-label="Position">{{i.oreb}}</td>
+                            <td data-label="Position">{{i.pf}}</td>
+                            <td data-label="Position">{{i.pts}}</td>
+                            <td data-label="Position">{{i.reb}}</td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+
+            </li>
+        </ul>
+    </div>
+</div>

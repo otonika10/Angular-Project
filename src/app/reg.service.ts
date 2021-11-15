@@ -17,6 +17,14 @@ export class RegService {
     catchError((err)=>{return err})
     );
   }
+  getdatastats(){
+    return this.http
+    .get<any>('https://free-nba.p.rapidapi.com/stats/?rapidapi-key=e71f3245f8msh7f301bd86bc7f78p11862cjsn9106b3b38be4'
+    )
+    .pipe(map((res:any)=>{return res;}),
+    catchError((err)=>{return err})
+    );
+  }
   getdatagames(){
     return this.http
     .get<any>('https://free-nba.p.rapidapi.com/games/?rapidapi-key=e71f3245f8msh7f301bd86bc7f78p11862cjsn9106b3b38be4'

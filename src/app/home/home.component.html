@@ -1,6 +1,25 @@
- <div class="cont">
-    <app-nav-bar></app-nav-bar>
- </div>
+<div class="cont">
+   <app-nav-bar></app-nav-bar>
+   <div class="items">
+      
+       <ul>
+           <li *ngFor="let i of players">
+               <table class="table">
+                   <tbody>
+                         <tr>
+                               <td data-label="FirstName">{{i.first_name}}</td>
+                               <td data-label="LastName">{{i.last_name}}</td>
+                               <td data-label="Team">{{i.team.abbreviation}}</td>
+                               <td data-label="Height">{{i.height_feet}}</td>
+                               <td data-label="Weight">{{i.weight_pounds}}</td>
+                               <td data-label="Position">{{i.position}}</td>
+                         </tr>
+              
+                       
+                   </tbody>
+                 </table>
 
-
-
+           </li>
+       </ul>
+   </div>
+</div>

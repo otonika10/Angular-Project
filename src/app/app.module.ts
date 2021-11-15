@@ -18,6 +18,7 @@ import { AuthModule } from './auth/auth.module';
 import { TeamsComponent } from './teams/teams.component';
 import { PlayersComponent } from './players/players.component';
 import { GamesComponent } from './games/games.component';
+import { StatsComponent } from './stats/stats.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { GamesComponent } from './games/games.component';
     NavBarComponent,
     TeamsComponent,
     PlayersComponent,
-    GamesComponent
+    GamesComponent,
+    StatsComponent
   ],
   imports: [
     HttpClientModule,
@@ -46,7 +48,7 @@ import { GamesComponent } from './games/games.component';
       {
         path: 'home',
         component: HomeComponent,
-        canActivate:[LoginGuard]
+        
       },
       {
         path: 'teams',
@@ -61,6 +63,11 @@ import { GamesComponent } from './games/games.component';
       {
         path: 'players',
         component: PlayersComponent,
+        canActivate:[LoginGuard]
+      },
+      {
+        path: 'stats',
+        component: StatsComponent,
         canActivate:[LoginGuard]
       },
       {

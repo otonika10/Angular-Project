@@ -9,10 +9,10 @@ import { RegService } from '../reg.service';
 export class TeamsComponent implements OnInit {
 
   constructor(private reg:RegService) { }
-  players:any[]=[]
+  arr:any[]=[]
   ngOnInit(): void {
     this.reg.getdata().subscribe((res:any)=>{console.log(res);
-      this.players = res.data;
+      this.arr = res.data;
       });
   }
   show(){

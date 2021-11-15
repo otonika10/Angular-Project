@@ -11,24 +11,20 @@
                      <th>LastName</th>
                      <th>Team</th>
                      <th>Height</th>
+                     <th>Weight</th>
                      <th>Position</th>
                     </tr>
                 </thead>
             </table>
             <li *ngFor="let i of players">
-               <!--  <div class="container">
-                    <div class="item1">{{i.abbreviation}}</div>
-                    <div class="item2">{{i.full_name}}</div>
-                    <div class="item3">{{i.name}}</div>
-                    <div class="item4">{{i.division}}</div>
-                </div> -->
                 <table class="table">
                     <tbody>
                           <tr>
                                 <td data-label="FirstName">{{i.first_name}}</td>
                                 <td data-label="LastName">{{i.last_name}}</td>
                                 <td data-label="Team">{{i.team.abbreviation}}</td>
-                                <td data-label="Division">{{i.height_feet}}</td>
+                                <td data-label="Height">{{i.height_feet}}</td>
+                                <td data-label="Weight">{{i.weight_pounds}}</td>
                                 <td data-label="Position">{{i.position}}</td>
                           </tr>
                
