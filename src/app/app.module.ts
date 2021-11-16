@@ -15,10 +15,11 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LoginComponent } from './auth/login/login.component';
 import { LoginGuard } from './auth/guard/login.guard';
 import { AuthModule } from './auth/auth.module';
-import { TeamsComponent } from './teams/teams.component';
-import { PlayersComponent } from './players/players.component';
-import { GamesComponent } from './games/games.component';
-import { StatsComponent } from './stats/stats.component';
+import { TeamsComponent } from './core/teams/teams.component';
+import { PlayersComponent } from './core/players/players.component';
+import { GamesComponent } from './core/games/games.component';
+import { StatsComponent } from './core/stats/stats.component';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -27,10 +28,7 @@ import { StatsComponent } from './stats/stats.component';
     RegisterComponent,
     HomeComponent,
     NavBarComponent,
-    TeamsComponent,
-    PlayersComponent,
-    GamesComponent,
-    StatsComponent
+
   ],
   imports: [
     HttpClientModule,
@@ -38,7 +36,7 @@ import { StatsComponent } from './stats/stats.component';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-
+    CoreModule,
     RouterModule.forRoot([
       {
         path: '',
