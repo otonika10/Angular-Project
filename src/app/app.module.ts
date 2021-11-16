@@ -21,6 +21,7 @@ import { GamesComponent } from './core/games/games.component';
 import { StatsComponent } from './core/stats/stats.component';
 import { CoreModule } from './core/core.module';
 import { core } from '@angular/compiler';
+import { DetailsComponent } from './core/details/details.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { core } from '@angular/compiler';
     RegisterComponent,
     HomeComponent,
     NavBarComponent,
+    DetailsComponent,
 
   ],
   imports: [
@@ -66,7 +68,10 @@ import { core } from '@angular/compiler';
         path: 'stats',
         loadChildren:()=>import('./core/core.module').then(m => m.CoreModule)
       },
-
+      {
+        path: 'details',
+        loadChildren:()=>import('./core/core.module').then(m => m.CoreModule)
+      },
       {
         path: 'reg',
         component: RegisterComponent

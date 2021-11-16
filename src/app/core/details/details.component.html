@@ -1,0 +1,201 @@
+<div class="cont">
+    <!-- <app-nav-bar></app-nav-bar> -->
+    <div class="items">
+        <h1 align="center">Players</h1>
+
+        <ul>
+            <table class="table">
+                <thead>
+                    <tr>
+                     <th>FirstName</th>
+                     <th>LastName</th>
+                     <th>Team</th>
+                     <th>Height</th>
+                     <th>Weight</th>
+                     <th>Position</th>
+                    </tr>
+                </thead>
+            </table>
+            <li *ngFor="let i of players">
+                <table class="table">
+                    <tbody>
+                          <tr>
+                                <td data-label="FirstName">{{i.first_name}}</td>
+                                <td data-label="LastName">{{i.last_name}}</td>
+                                <td data-label="Team">{{i.team.abbreviation}}</td>
+                                <td data-label="Height">{{i.height_feet}}</td>
+                                <td data-label="Weight">{{i.weight_pounds}}</td>
+                                <td data-label="Position">{{i.position}}</td>
+                          </tr>
+               
+                        
+                    </tbody>
+                  </table>
+
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="cont">
+    <div class="cont">
+        <!-- <app-nav-bar></app-nav-bar> -->
+        <div class="items">
+            <h1 align="center">Teams</h1>
+    
+            <ul>
+                <table class="table">
+                    <thead>
+                        <tr>
+                         <th>Abbreviation</th>
+                         <th>FullName</th>
+                         <th>Name</th>
+                         <th>Division</th>
+                         <th>City</th>
+                        </tr>
+                    </thead>
+                </table>
+                <li *ngFor="let i of arr2">
+                    <table class="table">
+                        <tbody>
+                              <tr>
+                                    <td data-label="Abbreviation">{{i.abbreviation}}</td>
+                                    <td data-label="FullName">{{i.full_name}}</td>
+                                    <td data-label="Name">{{i.name}}</td>
+                                    <td data-label="Division">{{i.division}}</td>
+                                    <td data-label="City">{{i.city}}</td>
+                              </tr>
+                   
+                            
+                        </tbody>
+                      </table>
+    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--     <app-nav-bar></app-nav-bar> -->
+        <div class="items">
+            <h1 align="center">Games</h1>
+    
+            <ul>
+    
+                <li *ngFor="let i of arr">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th>Date</th>
+                            <th>Period</th>
+                             <th>Season</th>
+                             <th>Status</th>
+                             <th>Abbreviation</th>
+                             <th>Score</th>
+                             <th></th>
+                             <th>Score</th>
+                             <th>Abbreviation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                              <tr>
+                                    <td data-label="Date">{{i.date}}</td>
+                                    <td data-label="Period">{{i.period}}</td>
+                                    <td data-label="Season">{{i.season}}</td>
+                                    <td data-label="Status">{{i.status}}</td>
+                                    <td data-label="Abbreviation">{{i.home_team.abbreviation}}</td>
+                                    <td data-label="Score">{{i.home_team_score}}</td>
+                                    <td data-label="VS">VS</td>
+                                    <td data-label="Score">{{i.visitor_team_score}}</td>
+                                    <td data-label="Abbreviation">{{i.visitor_team.abbreviation}}</td>
+                              </tr>
+                   
+                            
+                        </tbody>
+                      </table>
+    
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cont">
+        <!-- <app-nav-bar></app-nav-bar> -->
+        <div class="items">
+            <h1 align="center">Stats</h1>
+    
+            <ul>
+    
+                <li *ngFor="let i of arr1">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                             <th>Game</th>
+                             <th>ast</th>
+                             <th>blk</th>
+                             <th>dreb</th>
+                             <th>fg3-pct</th>
+                             <th>fg3a</th>
+                             <th>fg3m</th>
+                             <th>fg_pct</th>
+                             <th>fga</th>
+                             <th>fgm</th>
+                             <th>ft_pct</th>
+                             <th>fta</th>
+                             <th>ftm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                              <tr>
+                                    <td data-label="Game">{{i.game.date}}</td>
+                                    <td data-label="ast">{{i.ast}}</td>
+                                    <td data-label="blk">{{i.blk}}</td>
+                                    <td data-label="dreb">{{i.dreb}}</td>
+                                    <td data-label="fg3-pct">{{i.fg3_pct}}</td>
+                                    <td data-label="fg3a">{{i.fg3a}}</td>
+                                    <td data-label="fg3m">{{i.fg3m}}</td>
+                                    <td data-label="fg_pct">{{i.fg_pct}}</td>
+                                    <td data-label="fga">{{i.fg_pct}}</td>
+                                    <td data-label="fgm">{{i.fgm}}</td>
+                                    <td data-label="ft_pct">{{i.ft_pct}}</td>
+                                    <td data-label="fta">{{i.fta}}</td>
+                                    <td data-label="ftm">{{i.ftm}}</td>
+                              </tr>
+                              
+                              <tr class="head2">
+                                <th>Team ID and Score</th>
+                                <th></th>
+                                <th>Team ID and Score</th>
+                                <th>Player</th>
+                                <th>Team ID</th>
+                                <th>min</th>
+                                <th>oreb</th>
+                                <th>pf</th>
+                                <th>pts</th>
+                                <th>reb</th>
+                                <th>stl</th>
+                               
+                                <th></th>
+                                <th></th>
+                                
+                               </tr>
+                            
+                               <tr>
+                                <td data-label="Team ID and Score">{{"ID: "+i.game.visitor_team_id+" Score: "+i.game.visitor_team_score+"PTS" }}</td>
+                                <td data-label="">VS</td>
+                                <td data-label="Team ID and Score">{{"ID: "+i.game.home_team_id+" Score: "+i.game.home_team_score+"PTS" }}</td>
+                                <td data-label="Player">{{i.player.first_name+" "+i.player.last_name}}</td>
+                                <td data-label="Team ID">{{i.team.id}}</td>
+                                <td data-label="min">{{i.min}}</td>
+                                <td data-label="pf">{{i.oreb}}</td>
+                                <td data-label="pf">{{i.pf}}</td>
+                                <td data-label="pts">{{i.pts}}</td>
+                                <td data-label="reb">{{i.reb}}</td>
+                                <td data-label="stl">{{i.stl}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+    
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    

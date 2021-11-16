@@ -25,7 +25,11 @@ ul.nav-links li a {
   font-weight: 400;
   font-size: 15.86px;
 }
+a:hover{
+  transition: all .4s ease;
+  background-color:rgb(123, 224, 177) ;
 
+}
 
 @media screen and (max-width: 800px) {
 

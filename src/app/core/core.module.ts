@@ -6,6 +6,7 @@ import { TeamsComponent } from './teams/teams.component';
 import { StatsComponent } from './stats/stats.component';
 import { RouterModule } from '@angular/router';
 import { LoginGuard } from '../auth/guard/login.guard';
+import { DetailsComponent } from './details/details.component';
 
 
 
@@ -35,6 +36,11 @@ import { LoginGuard } from '../auth/guard/login.guard';
       {
         path: 'home/stats',
         component: StatsComponent,
+        canActivate:[LoginGuard]
+      },
+      {
+        path: 'home/details',
+        component: DetailsComponent,
         canActivate:[LoginGuard]
       },
     ])
