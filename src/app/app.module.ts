@@ -78,8 +78,9 @@ import { DetailsComponent } from './core/details/details.component';
       },
       {
         path: 'login',
-        component: LoginComponent
+        loadChildren:()=>import('./auth/auth.module').then(m => m.AuthModule)
       },
+
 
     ])
   ],
