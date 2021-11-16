@@ -55,7 +55,9 @@ th, td {
         .table thead{
             display: none;
         }
-    
+        .table .head2{
+            display: none;
+        }
         .table, .table tbody, .table tr, .table td{
             display: block;
             width: 100%;
