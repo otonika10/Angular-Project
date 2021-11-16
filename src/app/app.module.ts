@@ -20,6 +20,7 @@ import { PlayersComponent } from './core/players/players.component';
 import { GamesComponent } from './core/games/games.component';
 import { StatsComponent } from './core/stats/stats.component';
 import { CoreModule } from './core/core.module';
+import { core } from '@angular/compiler';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { CoreModule } from './core/core.module';
         redirectTo: 'reg',
         pathMatch: 'full'
       },
+      
       {
         path: 'home',
         component: HomeComponent,
@@ -50,24 +52,21 @@ import { CoreModule } from './core/core.module';
       },
       {
         path: 'teams',
-        component: TeamsComponent,
-        canActivate:[LoginGuard]
+        loadChildren:()=>import('./core/core.module').then(m => m.CoreModule)
       },
       {
         path: 'games',
-        component: GamesComponent,
-        canActivate:[LoginGuard]
+        loadChildren:()=>import('./core/core.module').then(m => m.CoreModule)
       },
       {
         path: 'players',
-        component: PlayersComponent,
-        canActivate:[LoginGuard]
+        loadChildren:()=>import('./core/core.module').then(m => m.CoreModule)
       },
       {
         path: 'stats',
-        component: StatsComponent,
-        canActivate:[LoginGuard]
+        loadChildren:()=>import('./core/core.module').then(m => m.CoreModule)
       },
+
       {
         path: 'reg',
         component: RegisterComponent
