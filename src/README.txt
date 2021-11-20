@@ -9,3 +9,18 @@ and access to certain tabs
 
 about rest of the information there are displayed all the information as it was requested plus i added some additional
 tabs
+
+example:
+{
+  "users": [
+    {
+      "reg_info": {
+        "email": "user@gmail.com",
+        "password": "user",
+        "confirm_password": "user"
+      },
+      "token": "fa1hfiawfaf1",
+      "id": 1
+    }
+  ]
+}
